@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none; 
+}
+
+img {
+  width: 100%;
+}
+
+$color-primary: rgb(36, 145, 235);
+
+.container {
+  margin: 0 auto;
+  
+  @media (max-width: 574px) {
+    padding: 0 2vw;
+  }
+
+  @media (min-width: 576px) {
+      max-width: 520px;
+  }
+  @media (min-width: 768px) {
+      max-width: 720px;
+  }
+  @media (min-width: 992px) {
+      max-width: 920px;
+  }
+  @media (min-width: 1200px) {
+      max-width: 1120px;
+  }
+}
+
+nav {
+  background-color: $color-primary;
+  padding: 1.5rem;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  
+    h1 a {
+      color: #fff;       
+    }
+  
+    .btn_carrinho {
+      align-self: center;
+      position: relative;
+
+      .carrinho {
+        width: 300px;
+        height: 0;
+        position: absolute;
+        right: 0;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgb(216, 214, 214);
+        width: 300px;
+        overflow-y: scroll;
+        transition: .5s ease-in-out;
+
+        &>div {
+          padding: 10px;
+
+          div {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            justify-content: space-between;
+            margin: 10px 0;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;            
+          }
+
+          &>p {
+            border-top: 1px solid rgb(216, 214, 214);
+          padding-top: .5rem;
+          color: $color-primary;
+          }
+        }
+        
+        &.active {
+          height: 250px;
+        }
+      }
+
+      a {
+        color: $color-primary;
+        background-color: #fff;
+        padding: .3rem .5rem;
+        border-radius: 1rem;
+      } 
+    }
+  }
+}
+
+.erro {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  background-color: red;
+  color: #fff;
+}
+
+.produtos {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+
+  .produto_individual {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(216, 214, 214);
+    max-width: 240px;
+    margin: 0 auto;
+
+    h2 {
+      margin: .5rem 0;
+    }
+
+    .descricao_produto {
+      letter-spacing: .5px;
+    }
+
+    .preco_produto {
+      text-align: center;
+      margin: .5rem 0;
+      color: $color-primary;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    div {
+      text-align: center;
+      margin: 1rem 0;
+
+      i {
+        margin-right: .3rem;
+      }
+
+      button {
+        cursor: pointer;
+        color: $color-primary;
+        background-color: transparent;
+        border-top: none;
+        border-bottom: none;
+        padding: .5rem;
+        border-left: 2px solid #b6b5b5;
+        border-right: 2px solid #b6b5b5;
+        text-transform: uppercase;
+        transition: .2s ease-in-out;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:hover {
+          background-color: $color-primary;
+          border: none;
+          color: #fff;
+          border-left: 2px solid $color-primary;
+          border-right: 2px solid $color-primary;
+        }
+      }
+    }
+  }
+}

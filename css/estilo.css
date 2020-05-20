@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+.container {
+  margin: 0 auto; }
+  @media (max-width: 574px) {
+    .container {
+      padding: 0 2vw; } }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 520px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 920px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1120px; } }
+
+nav {
+  background-color: #2491eb;
+  padding: 1.5rem; }
+  nav .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    nav .navbar h1 a {
+      color: #fff; }
+    nav .navbar .btn_carrinho {
+      -ms-flex-item-align: center;
+          align-self: center;
+      position: relative; }
+      nav .navbar .btn_carrinho .carrinho {
+        width: 300px;
+        height: 0;
+        position: absolute;
+        right: 0;
+        background-color: #fff;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0 5px #d8d6d6;
+                box-shadow: 0 0 5px #d8d6d6;
+        width: 300px;
+        overflow-y: scroll;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out; }
+        nav .navbar .btn_carrinho .carrinho > div {
+          padding: 10px; }
+          nav .navbar .btn_carrinho .carrinho > div div {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            margin: 10px 0;
+            gap: 10px;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            justify-items: center; }
+          nav .navbar .btn_carrinho .carrinho > div > p {
+            border-top: 1px solid #d8d6d6;
+            padding-top: .5rem;
+            color: #2491eb; }
+        nav .navbar .btn_carrinho .carrinho.active {
+          height: 250px; }
+      nav .navbar .btn_carrinho a {
+        color: #2491eb;
+        background-color: #fff;
+        padding: .3rem .5rem;
+        border-radius: 1rem; }
+
+.erro {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  background-color: red;
+  color: #fff; }
+
+.produtos {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  background-color: #f9f9f9;
+  padding: 1rem; }
+  .produtos .produto_individual {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #d8d6d6;
+            box-shadow: 0 0 5px #d8d6d6;
+    max-width: 240px;
+    margin: 0 auto; }
+    .produtos .produto_individual h2 {
+      margin: .5rem 0; }
+    .produtos .produto_individual .descricao_produto {
+      letter-spacing: .5px; }
+    .produtos .produto_individual .preco_produto {
+      text-align: center;
+      margin: .5rem 0;
+      color: #2491eb;
+      font-weight: bold;
+      font-size: 1.2rem; }
+    .produtos .produto_individual div {
+      text-align: center;
+      margin: 1rem 0; }
+      .produtos .produto_individual div i {
+        margin-right: .3rem; }
+      .produtos .produto_individual div button {
+        cursor: pointer;
+        color: #2491eb;
+        background-color: transparent;
+        border-top: none;
+        border-bottom: none;
+        padding: .5rem;
+        border-left: 2px solid #b6b5b5;
+        border-right: 2px solid #b6b5b5;
+        text-transform: uppercase;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; }
+        .produtos .produto_individual div button:focus {
+          outline: 0; }
+        .produtos .produto_individual div button:hover {
+          background-color: #2491eb;
+          border: none;
+          color: #fff;
+          border-left: 2px solid #2491eb;
+          border-right: 2px solid #2491eb; }
+
+/*# sourceMappingURL=estilo.css.map */
